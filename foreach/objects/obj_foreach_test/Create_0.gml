@@ -19,7 +19,7 @@ foreach_list(apples_list as (apple, i) {
 // map
 
 var apples_map = ds_map_create();
-ds_map_add(apples_map, "red", "delicius");
+ds_map_add(apples_map, "red", "delicious");
 ds_map_add(apples_map, "green", "eww");
 ds_map_add(apples_map, "yellow", "yum");
 
@@ -50,9 +50,9 @@ foreach_queue(apples_queue as (apple, i) {
 // priority
 
 var apples_priority = ds_priority_create();
-ds_priority_add(apples_stack, "red", 10);
-ds_priority_add(apples_stack, "green", 30);
-ds_priority_add(apples_stack, "yellow", 20);
+ds_priority_add(apples_priority, "red", 10);
+ds_priority_add(apples_priority, "green", 30);
+ds_priority_add(apples_priority, "yellow", 20);
 
 foreach_priority(apples_priority as (apple, priority) {
     show_debug_message(string(priority) + ": " + apple);
@@ -61,7 +61,7 @@ foreach_priority(apples_priority as (apple, priority) {
 
 // struct
 
-var apples_struct = { red : "delicius", green : "eww", yellow : "yum" };
+var apples_struct = { red : "delicious", green : "eww", yellow : "yum" };
 
 foreach_struct(apples_struct as (taste, color) {
     show_debug_message(color + " is " + taste);
