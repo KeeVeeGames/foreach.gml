@@ -146,7 +146,7 @@ Output:
 
 ## Break
 
-You can add `breakeach` keyword in my foreach loop with that hacky modification, but it's not recommended as foreach loop is not intended to be breakable.
+You can add `breakeach` keyword in that foreach with a hacky modification, but it's not recommended as a foreach loop is not intended to be breakable.
 
 ```js
 #macro breakeach breakme[@ 0] = true;
