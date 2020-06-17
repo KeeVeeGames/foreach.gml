@@ -7,7 +7,7 @@ General syntax is:
 
 ```js
 foreach(collection as (item) {
-    // do things with item;
+    // do things with item
 });
 ```
 
