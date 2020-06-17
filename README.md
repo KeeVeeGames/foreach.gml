@@ -13,6 +13,10 @@ foreach(collection as (item) {
 
 You also can receive additional parameters such as iteration index, key for map, priority for priority queue and property name for struct, specifying it inside `as` keyword brackets after item var.
 
+## Installation:
+Get the latest asset package from the [releases page](../../releases). Import it into IDE.   
+Alternatively copy the code from corresponding scripts into your project.
+
 ## Examples
 
 ### Foreach in array:
