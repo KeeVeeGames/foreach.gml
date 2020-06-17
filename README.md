@@ -7,7 +7,7 @@ General syntax is:
 
 ```js
 foreach(collection as (item) {
-    do_things(item);
+    // do things with item;
 });
 ```
 
@@ -35,7 +35,7 @@ Output:
 
 ### Foreach in struct:
 ```js
-var apples = { red : "delicius", green : "eww", yellow : "yum" };
+var apples = { red : "delicious", green : "eww", yellow : "yum" };
 
 foreach_struct(apples as (taste, color) {
     show_debug_message(color + " is " + taste);
@@ -45,7 +45,7 @@ foreach_struct(apples as (taste, color) {
 Output:
 ```
 yellow is yum
-red is delicius
+red is delicious
 green is eww
 ```
 
@@ -71,7 +71,7 @@ Output:
 ### Foreach in map:
 ```js
 var apples = ds_map_create();
-ds_map_add(apples, "red", "delicius");
+ds_map_add(apples, "red", "delicious");
 ds_map_add(apples, "green", "eww");
 ds_map_add(apples, "yellow", "yum");
 
@@ -83,7 +83,7 @@ foreach_map(apples as (taste, color) {
 Output:
 ```
 yellow is yum
-red is delicius
+red is delicious
 green is eww
 ```
 
@@ -142,6 +142,36 @@ Output:
 30: green
 20: yellow
 10: red
+```
+
+## Break
+
+You can add `breakeach` keyword in my foreach loop with that hacky modification, but it's not recommended as foreach loop is not intended to be breakable.
+
+```js
+#macro breakeach breakme[@ 0] = true;
+
+function foreach(array, func) {
+    var breakme = array_create(1);
+    breakme[0] = false;
+    
+    var size = array_length(array);
+    
+    for (var i = 0; i < size; i++) {
+        if (breakme[0] == true) break;
+        
+        var element = array[i];
+        func(element, i, breakme);
+    }
+}
+
+var apples = ["red", "green", "yellow", "mac", "forbidden"];
+
+foreach(apples as (apple, i, breakme) {
+    show_debug_message(apple);
+    
+    if (i == 2) breakeach;
+});
 ```
 
 ## Author:
