@@ -17,7 +17,7 @@ You also can receive additional parameters such as iteration index, key for map,
 Get the latest asset package from the [releases page](../../releases). Import it into IDE.   
 Alternatively copy the code from corresponding scripts into your project.
 
-## Examples
+## Examples:
 
 ### Foreach in array:
 ```js
@@ -148,7 +148,7 @@ Output:
 10: red
 ```
 
-## Break
+## Break:
 
 You can add `breakeach` keyword in that foreach with a hacky modification, but it's not recommended as a foreach loop is not intended to be breakable.
 
