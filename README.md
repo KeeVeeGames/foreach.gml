@@ -1,5 +1,7 @@
 # foreach.gml
 
+[![Donate](https://img.shields.io/badge/donate-%E2%9D%A4-blue.svg)](https://musnik.itch.io/donate-me) [![License](https://img.shields.io/github/license/KeeVeeGames/foreach.gml)](#!)
+
 It is a `foreach()` loop implementation for GameMaker: Studio 2.3+ for arrays, ds_lists, ds_maps, ds_stacks, ds_queues, ds_priorities and structs.   
 **Note:** queue-type data structures such as stacks, queues and priorities will be empty after full foreach pass.
 
