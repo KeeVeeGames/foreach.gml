@@ -3,9 +3,9 @@
 [![Donate](https://img.shields.io/badge/donate-%E2%9D%A4-blue.svg)](https://musnik.itch.io/donate-me) [![License](https://img.shields.io/github/license/KeeVeeGames/foreach.gml)](#!)
 
 It is a `foreach()` loop implementation for GameMaker: Studio 2.3+ for arrays, ds_lists, ds_maps, ds_stacks, ds_queues, ds_priorities and structs.   
-**Note:** queue-type data structures such as stacks, queues and priorities will be empty after full foreach pass.
+**Note:** queue-type data structures such as stacks, queues, and priorities will be empty after full foreach pass.
 
-General syntax is:
+The general syntax is:
 
 ```js
 foreach(collection as (item) {
@@ -13,7 +13,7 @@ foreach(collection as (item) {
 });
 ```
 
-You also can receive additional parameters such as iteration index, key for map, priority for priority queue and property name for struct, specifying it inside `as` keyword brackets after item var.
+You also can receive additional parameters such as iteration index, key for map, priority for priority queue, and property name for a struct, specifying it inside `as` keyword brackets after item var.
 
 ## Installation:
 Get the latest asset package from the [releases page](../../releases). Import it into IDE.   
